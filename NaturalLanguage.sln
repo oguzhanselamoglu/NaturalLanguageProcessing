@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalLanguageApp", "src\NaturalLanguageApp\NaturalLanguageApp.csproj", "{1D3DA9BC-A3DB-47E5-821E-A59E57A823FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2150534A-07C0-4E0B-81B1-32D813C2E77B}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D3DA9BC-A3DB-47E5-821E-A59E57A823FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D3DA9BC-A3DB-47E5-821E-A59E57A823FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D3DA9BC-A3DB-47E5-821E-A59E57A823FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D3DA9BC-A3DB-47E5-821E-A59E57A823FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7553FA75-81AC-45C8-BF44-37D779A2CC95}
+	EndGlobalSection
+EndGlobal
