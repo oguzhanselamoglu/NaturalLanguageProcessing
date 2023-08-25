@@ -17,7 +17,7 @@ For authentication you can authenticate by downloading a service account JSON fi
 - Select the JSON key type and click the Create button.
 - Download the JSON file to your computer.
 
-# Google Nuget Package
+# Nuget package and example
 - dotnet add package Google.Cloud.Language.V1
 ```bash 
         static void Main(string[] args)
@@ -30,3 +30,21 @@ For authentication you can authenticate by downloading a service account JSON fi
             Console.WriteLine($"Magnitude: {sentiment.Magnitude}");
         }
 ```
+
+# Azure
+Text Analytics is part of the Azure Cognitive Service for Language, a cloud-based service that provides Natural Language Processing (NLP) features for understanding and analyzing text. This client library offers the following features:
+
+- To create a multi-service resource: [Azure Portal](https://portal.azure.com/#create/Microsoft.CognitiveServicesAllInOne)
+- After your resource is successfully deployed, select Next Steps > Go to resource.
+- From the quickstart pane that opens, you can access the resource endpoint and manage keys.
+
+# Nuget package and example
+- dotnet add package Azure.AI.TextAnalytics
+
+```bash 
+Uri endpoint = new("<endpoint>");
+AzureKeyCredential credential = new("<apiKey>");
+TextAnalyticsClient client = new(endpoint, credential);
+```
+
+

@@ -2,12 +2,12 @@ namespace NaturalLanguageApp.Services.Processing;
 
 public class AwsNLPService: NLPService
 {
-    public override void Confugure(string credential)
+    protected override void Confugure()
     {
         throw new NotImplementedException();
     }
 
-    public override async Task<NLPResponse> AnalyzeSentimentAsync(string plainText)
+    protected override async Task<NLPResponse> AnalyzeSentimentAsync(string plainText)
     {
         var response = new NLPResponse();
         return response;

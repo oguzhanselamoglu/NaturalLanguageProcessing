@@ -8,9 +8,11 @@ public class GoogleNLPService : NLPService
     
     private LanguageServiceClient _client;
     
-    public override void Confugure(string credential)
+    protected override void Confugure()
     {
-        var _credential = GoogleCredential.FromJson(credential);
+        string file = @"key.json";
+        var json = File.ReadAllText(file);
+        var _credential = GoogleCredential.FromJson(json);
         LanguageServiceClientBuilder builder = new LanguageServiceClientBuilder
         {
   
@@ -20,7 +22,7 @@ public class GoogleNLPService : NLPService
         _client = builder.Build();
     }
 
-    public override async Task<NLPResponse> AnalyzeSentimentAsync(string plainText)
+    protected override async Task<NLPResponse> AnalyzeSentimentAsync(string plainText)
     {
         
         // string file = ".\\key.json";
@@ -34,6 +36,10 @@ public class GoogleNLPService : NLPService
         
         var serviceResponse = await _client.AnalyzeSentimentAsync(Document.FromPlainText(plainText));
         var sentiment = serviceResponse.DocumentSentiment;
+        foreach (var sentence in serviceResponse.Sentences)
+        {
+           Console.WriteLine(sentence);
+        }
         response.Magnitude = sentiment.Magnitude;
         response.Score = sentiment.Score;
         return response;
